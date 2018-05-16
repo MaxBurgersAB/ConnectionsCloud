@@ -199,9 +199,9 @@ if (__GuestModel_serviceDeskURL !== undefined) {
     //  =========================================================
 
     //  This variable holds the link to the Service Desk site that is used to redirect users when they need to invite external people
-    var __GuestModel_serviceDeskURL = 'http://tech.poglianis.net/';
+    var __GuestModel_serviceDeskURL = 'https://supportnord.atea.se/';
 
     //  The following two variables hold the IDs of the ACL Communities
-    var __GuestModel_firstACL = new __GuestModel_UserAllowed('7dd029ee-44d1-4fce-82df-c3e74d922446');
-    var __GuestModel_secondACL = new __GuestModel_UserAllowed('b348aa12-3eea-49c0-a743-eb2ca7bb72e7');
+    var __GuestModel_firstACL = new __GuestModel_UserAllowed('2497ef8e-3c10-48f9-81ea-04e532167093');
+    var __GuestModel_secondACL = new __GuestModel_UserAllowed('5481c685-5bfb-4d67-b33e-fc0694a27e7a');
 }
