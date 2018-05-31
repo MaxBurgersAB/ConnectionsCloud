@@ -199,7 +199,7 @@ if (__GuestModel_serviceDeskURL !== undefined) {
     //  =========================================================
 
     //  This variable holds the link to the Service Desk site that is used to redirect users when they need to invite external people
-    var __GuestModel_serviceDeskURL = 'https://supportnord.atea.se/';
+    var __GuestModel_serviceDeskURL = 'mailto:helpdesk@max.se';
 
     //  The following two variables hold the IDs of the ACL Communities
     var __GuestModel_firstACL = new __GuestModel_UserAllowed('2497ef8e-3c10-48f9-81ea-04e532167093');
