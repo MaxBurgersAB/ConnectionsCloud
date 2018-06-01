@@ -12,7 +12,7 @@
 This set of scripts addresses 3 areas:
 1. Custom Guest Model
 2. Privacy
-3. Sametime Cloud AutoLogin 
+ 
 
 ------
 # *Custom Guest Model*
@@ -86,57 +86,5 @@ The script automatically removes from the "View" widget in the "About" tab of th
 In the following picture, both Franck Adams and Heather Reeds viewed the document but their details are not shown:
 ![HideUserActivity](docs/HideUserActivity.gif)
  
-### *Installation*
-You can install these extensions directly by adding the [HideUserActivity.json](GuestModelHideUserActivity.json) JSON file into the Organization Extensions of your IBM Connections Cloud organization.
-
-### *Customization*
-You may want to customize the criteria used by the script to select the people to hide, you need to modify the following function in the [HideUserActivity.js](GuestModelHideUserActivity.js) script:
-![HideUserActivity2](docs/HideUserActivity2.gif)
-In the example, we want to hide the View/Download actions performed by *fadams@spogliani.ibmcollab.com* and *hreeds@spogliani.ibmcollab.com*. 
-You may want to use a more sophisticated algorithm, involving the use of regular expressions for instance.
-
-### *Technical impact*
-The scripts does not have any technical impact on the behavior of your browser session.
 
 ------
-# *Sametime Cloud AutoLogin* 
-
-The goal of this area is to provide a mean by which an organization replace the default behavior of the IBM Connections Cloud embedded Sametime Autologin.
-By default, today, when a user logs into IBM Connections Cloud, and automatic Login is performed on the emebedded Sametime.
-
-This may not be adapted to organizations where many users still use the IBM Notes client to access their email and have the IBM Sametime application embedded in the IBM Notes client.
-
-The way in which the script works is the following:
-
-    When the user logs the first time, the AutoLogin feature is removed
-![STAutoLogin1](docs/STAutoLogin1.gif)
-
-    The user could force AutoLogin by setting the relevant checkbox:
-![STAutoLogin2](docs/STAutoLogin2.gif)
-    
-    At this point, AutoLogin will be re-enabled.
-
-    The user can prevent AutoLogin again by unchecking the relevant checkbox
-
- 
-### *Installation*
-You can install these extensions directly by adding the [SametimeNoAuto.json](GuestModelSametimeNoAuto.json) JSON file into the Organization Extensions of your IBM Connections Cloud organization.
-
-### *Customization*
-No customization options for this script
-
-### *Technical impact*
-The scripts creates a Cookie with this name:
-
-    CustomizerSametimeCookie
-
-When this Cookie is present, the AutoLogin behavior is determined by the user having checked/unchecked the relevant UI option.
-
-The scripts also manages a standard IBM Sametime Cookie
-
-    stproxy.dock.notremembered
-
-This cookie is set to "no-auto-connect" when the new default behavior of preventing Auto-Login is in place.
-
-I do not manage "persistent cookies". You may need to modify the source code to manage them:
-![STAutoLogin3](docs/STAutoLogin3.gif)
