@@ -9,10 +9,8 @@
 ------
 
 # **Guest Model Customizer extension**
-This set of scripts addresses 3 areas:
-1. Custom Guest Model
-2. Privacy
- 
+This set of scripts for Custom Guest Model
+
 
 ------
 # *Custom Guest Model*
@@ -74,17 +72,5 @@ The Cookie can hold a value of **true** or **false** .
 The Cookie is used to store the authorization status for the two ACLs previously described. Since getting the authorization status requires a REST call to the IBM Connections APIs (to validate the membership of the current user against the two Communities modelling the ACLs), saving the status in a Cookie avoids unnecessary calls and speeds up the execution of the scripts. 
 
 The **side effect** is that if the ACL memembership is changed when the user has a browser open, the user will need to close the browser in order to have the new authorization status reflected in the behavior of the scripts.
-
-------
-# *Privacy*
-
-The goal of this area is to provide a mean by which an organization could selectively hide the details of whom viewed/downloaded any given file. 
-The idea is that sometimes, to comply with local policies, organizations need to protect the details of certain actions performed by the user and which did not require an explicit **consent**. Viewing or Downloading a file is one of these activities. 
-
-The script automatically removes from the "View" widget in the "About" tab of the Files Preview page the details of people whose identity needs to be protected.
-
-In the following picture, both Franck Adams and Heather Reeds viewed the document but their details are not shown:
-![HideUserActivity](docs/HideUserActivity.gif)
- 
 
 ------
